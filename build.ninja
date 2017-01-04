@@ -1,0 +1,11 @@
+platform = linux
+lua_lib = /Projects/steven/install/lua/5.3.1/lib/liblua.a
+lua_include = /Projects/steven/install/lua/5.3.1/include
+I = -I${lua_include}
+
+
+rule combine
+  command = deps/${platform}/bin/luastatic $in $I
+
+
+build auto: combine module/lua/automagical.lua $lua_lib

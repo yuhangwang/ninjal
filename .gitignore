@@ -1,3 +1,6 @@
+.ninja_deps
+.ninja_log
+
 # Compiled Lua sources
 luac.out
 
